@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Galeria de Imagenes</title>
+    <link type="text/css" href="css/estilo.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/validar.js"></script>
+    <svg viewBox="0 0 700 300">
+        <symbol id="s-text">
+          <text text-anchor="middle" x="40%" y="80%">Galeria</text>
+        </symbol>
+        <g class = "g-ants">
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+          <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+      </svg>
+</head>
+<body onload="inicio()">
+    <div class="cajap">
+        <div class="cajaloguito">
+            <section id="imagen"></section>
+        </div>
+        <div class="cajabotones">
+            <input class="cajaboton" type="button" id="anterior" value="Anterior" onclick="anterior();">
+            <input class="cajaboton" type="button" id="inicio" value="Iniciar" onclick="inicio();">
+            <input class="cajaboton" type="button" id="siguiente" value="Siguiente" onclick="siguiente()">
+        </div>
+    </div>
+</body>
+</html>

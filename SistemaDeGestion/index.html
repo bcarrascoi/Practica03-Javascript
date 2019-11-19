@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" href="css/estilo.css" rel="stylesheet">
+    <script type="text/javascript" src="js/validar.js"></script>
+    <h1>
+        <span>F</span>
+        <span>O</span>
+        <span>R</span>
+        <span>M</span>
+        <span>U</span>
+        <span>L</span>
+        <span>A</span>
+        <span>R</span>
+        <span>I</span>
+        <span>O</span>
+      </h1>
+</head>
+
+<body class="caja">
+    <form id="frmusr" method="POST" action="php/formulario.php" onsubmit="return validarCamposObligatorios()" class="sinborde">
+        <label for="cedula">Cedula (*)</label>
+        <input type="text" id="cedula" name="cedula" value="" placeholder="Ingrese el numero de cedula..." onchange="validar()" onkeypress="return soloNumeros(event)" maxlength="10" />
+        <span id="mensajeCedula"></span>
+        <br>
+
+
+        <label for="nombres">Nombres (*)</label>
+        <input type="text" id="nombres" name="nombres" value="" placeholder="Ingrese su nombre ..." onkeypress="return sololetras(event)" onchange="nombre()" maxlength="50" />
+        <span id="mensajeNombres"></span>
+        <br>
+
+
+        <label for="apellidos">Apelidos (*)</label>
+        <input type="text" id="apellidos" name="apellidos" value="" placeholder="Ingrese su apellido ..." onkeypress="return sololetras(event)" onchange="apellido()" maxlength="50" />
+        <span id="mensajeApellidos"></span>
+        <br>
+
+
+        <label for="direccion">Dirección (*)</label>
+        <input type="text" id="direccion" name="direccion" value="" placeholder="Ingrese su dirección ..." maxlength="75" />
+        <span id="mensajeDireccion"></span>
+        <br>
+
+
+        <label for="telefono">Teléfono (*)</label>
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Ingrese su número telefónico ..." onkeypress="return soloNumeros(event)" onchange="validartelefono()" maxlength="10" />
+        <span id="mensajeTelefono"></span>
+        <br>
+
+        <label for="fecha">Fecha Nacimiento (*)</label>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento" value="" placeholder="dd/mm/yyyy" onkeypress="return soloNumeros(event)" onchange="fecha1()" />
+        <span id="mensajeFecha"></span>
+        <br>
+
+
+        <label for="correo">Correo electrónico (*)</label>
+        <input type="text" id="correo" name="correo" value="" placeholder="Ingrese su correo electrónico ..." onchange="validarEmail()" maxlength="50" />
+        <span id="mensajeCorreo"></span>
+        <br>
+
+        <label for="contra">Contraseña (*)</label>
+        <input type="password" id="contra" name="contra" value="" placeholder="Ingrese su contraseña ..." onchange="validarContra()" maxlength="8" />
+        <span id="mensajeContra"></span>
+        <br>
+
+        <input type="submit" id="crear" name="crear" value="Aceptar" />
+        <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+
+    </form>
+</body>
+</html>
